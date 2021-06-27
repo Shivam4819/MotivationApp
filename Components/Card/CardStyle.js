@@ -3,14 +3,20 @@ import {StyleSheet,Dimensions} from 'react-native';
 const CardStyle= StyleSheet.create({
   container:{
     width:'100%',
+    marginTop:10,
   },
   cardText:{
-    fontSize:30
+    fontFamily:'cursive',
+    fontSize:18,
+    textAlign:'right',
+    padding:10,
+    fontWeight:'900',
+
   },
   card:{
     backgroundColor:'#fff',
     marginBottom:10,
-    marginLeft:'1%',
+    marginLeft:'2%',
     width:'96%',
     shadowColor:'black',
     shadowOpacity:2,
@@ -21,9 +27,11 @@ const CardStyle= StyleSheet.create({
     }
   },
   cardimage:{
+    flex:1,
     width:'100%',
     height: 200,
-    resizeMode:'cover'
+    resizeMode:'contain',
+    backgroundColor: 'black',
   }
 })
 

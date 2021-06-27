@@ -1,15 +1,23 @@
-import React from 'react';
-import {View , Text, FlatList} from 'react-native';
-import CardList from "./CardList";
+import React,{PureComponent} from 'react';
+import {StyleSheet,Text,View,TouchableOpacity, Image, Dimensions,Pressable,Button} from 'react-native';
 import CardStyle from "./CardStyle";
 import CardComponent from "./CardComponent";
-export default function CardRendering(){
+export default function CardRendering({card, props}){
+  const {image,name}=card
   return(
-    <View style={CardStyle.container}>
-      <FlatList
-        data={CardList}
-        renderItem={({item}) => <CardComponent card={item}/>}
-      />
+    <View >
+      <TouchableOpacity
+        style={CardStyle.card}
+        onPress={()=> props.navigation.navigate('Quotes')}
+      >
+        <Image
+          style={CardStyle.cardimage}
+          source={image}
+          />
+        <Text style={CardStyle.cardText}> {name}</Text>
+      </TouchableOpacity>
+
     </View>
   )
 }
+

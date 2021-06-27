@@ -1,21 +1,24 @@
 import React from 'react';
-import {StyleSheet,Text,View,ImageBackground} from 'react-native';
+import {Text,View,ImageBackground, Button} from 'react-native';
 import style from './HomeStyles';
 
 export default function HomeComponent(props) {
-  console.log('hiiiiiiiiiii')
-   const {image} = props.quotes
-   console.log(props)
+
   return(
     <View style={style.HomeContainer}>
       <ImageBackground
-        // source={require('../../Images/NewHome.jpg')}
-       source={image}
+        source={require('../../Images/NewHome.jpg')}
         style={style.image}
       />
       <View style={style.titles}>
         <Text style={style.title}>Motivation</Text>
       </View>
+      <View style={style.buttonContainer}>
+
+        <Button
+          title="Next Page"
+          onPress={()=>props.navigation.navigate('Card')}/>
       </View>
+    </View>
   );
 }

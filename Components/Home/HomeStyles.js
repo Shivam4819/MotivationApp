@@ -20,7 +20,13 @@ const style= StyleSheet.create({
   title:{
     fontSize:50,
     fontWeight:'900',
+  },
+  buttonContainer:{
+    position: 'absolute',
+    bottom:50,
+    width: '100%',
   }
+
 })
 
 export default style;
